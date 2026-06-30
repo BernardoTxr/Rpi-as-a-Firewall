@@ -1,0 +1,6 @@
+# RPi Guardian - Python dependencies (install on the Raspberry Pi).
+# mitmproxy is best installed via pipx (see setup/rpi/README.md); it is listed
+# here for reference. streamlit + pandas power the dashboard.
+mitmproxy>=10.0
+streamlit>=1.30
+pandas>=2.0

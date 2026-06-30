@@ -1,0 +1,20 @@
+# RPi Guardian - host/IP blacklist (Stage 1).
+# One entry per line. Lines starting with '#' and blank lines are ignored.
+# Matching is exact, case-insensitive, against the request host (no port).
+# Add the hosts/IPs you want to block for the demo.
+
+# --- Known mining pools (examples) ---
+pool.minexmr.com
+xmr.pool.minergate.com
+stratum.slushpool.com
+us-east.stratum.slushpool.com
+eu.stratum.hashvault.pro
+pool.supportxmr.com
+
+# --- Example C2 / malware hosts ---
+evil-c2.example.com
+malware-beacon.example.net
+badhost.test
+
+# --- Demo target used by setup/computer_a/demo_blacklist.sh ---
+blocked.demo

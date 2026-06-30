@@ -1,0 +1,19 @@
+# RPi Guardian - payload signatures (Stage 2).
+# One Python regex per line. Lines starting with '#' and blank lines ignored.
+# Each regex is searched (case-insensitive) against the request URL, headers
+# and body. A match blocks the request with HTTP 403.
+
+# --- Cryptomining (Stratum protocol) ---
+stratum\+tcp
+mining\.subscribe
+mining\.authorize
+"method"\s*:\s*"login"
+
+# --- C2 / beaconing markers ---
+X-Beacon
+cmd=beacon
+implant_id=
+
+# --- Generic suspicious indicators ---
+/gate\.php
+/c2/checkin
